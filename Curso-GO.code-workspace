@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"name": "0-Testes",
+			"path": "0-Testes"
+		},
+		{
+			"name": "3-Fundacao",
+			"path": "3-Fundacao"
+		},
+		{
+			"name": "4-PcoImportantes",
+			"path": "4-PcoImportantes"
+		},
+		{
+			"name": "5-Context",
+			"path": "5-Context"
+		},
+		{
+			"name": "6-Extras",
+			"path": "6-Extras"
+		},
+		{
+			"name": "7-Banco-de-dados",
+			"path": "7-Banco-de-dados"
+		},
+		{
+			"name": "Desafio1",
+			"path": "Desafio1"
+		}
+	]
+}
