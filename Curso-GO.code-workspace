@@ -27,6 +27,15 @@
 		{
 			"name": "Desafio1",
 			"path": "Desafio1"
+		},
+		{
+			"path": "8-Packaging"
+		},
+		{
+			"path": "9-Testing"
+		},
+		{
+			"path": "10-APIS"
 		}
 	]
 }

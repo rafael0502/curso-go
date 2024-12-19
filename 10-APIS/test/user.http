@@ -1,0 +1,18 @@
+POST http://localhost:8000/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Luiz Schmitz",
+    "email": "luizaugustovieira@gmail.com",
+    "password": "12345"
+}
+
+###
+
+POST http://localhost:8000/users/generate_token HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "augustovieira@gmail.com",
+    "password": "12345"
+}
