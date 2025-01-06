@@ -65,7 +65,7 @@ func main() {
 		r.Use(jwtauth.Verifier(configs.TokenAuth))
 		r.Use(jwtauth.Authenticator)
 		r.Post("/", productHandler.CreateProduct)
-		r.Get("/{page}/{limite}/{sort}", productHandler.GetProducts)
+		r.Get("/", productHandler.GetProducts)
 		r.Get("/{id}", productHandler.GetProduct)
 		r.Put("/{id}", productHandler.UpdateProduct)
 		r.Delete("/{id}", productHandler.DeleteProduct)

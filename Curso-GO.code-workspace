@@ -36,6 +36,9 @@
 		},
 		{
 			"path": "10-APIS"
+		},
+		{
+			"path": "11-Multithreading"
 		}
 	]
 }
