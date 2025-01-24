@@ -45,6 +45,9 @@
 		},
 		{
 			"path": "12-Eventos"
+		},
+		{
+			"path": "13-GoPrivate"
 		}
 	]
 }
