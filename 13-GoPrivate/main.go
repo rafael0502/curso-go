@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/devfullcycle/fcutils/pkg/events"
+	"github.com/rafael0502/utils-secret/pkg/events"
 )
 
 func main() {
