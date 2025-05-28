@@ -1,0 +1,13 @@
+Para realizar o deploy:
+
+1 - Build e push no Container Registry:
+
+gcloud builds submit --tag gcr.io/temperaturacep-461120/temperaturacep
+
+2 - Deploy no Cloud Run:
+
+gcloud run deploy temperaturacep --image gcr.io/temperaturacep-461120/temperaturacep --platform managed --region southamerica-east1 --allow-unauthenticated --set-env-vars WEATHER_API_KEY=WEATHER_API_KEY=f66eea1616bb484fad3183814252705
+
+3 - Teste no Cloud Run
+https://temperaturacep-lmxwedrmsq-rj.a.run.app/temperatura?cep=88106680
+https://temperaturacep-lmxwedrmsq-rj.a.run.app/temperatura?cep=88132678
