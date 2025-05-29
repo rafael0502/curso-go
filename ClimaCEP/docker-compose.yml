@@ -1,0 +1,42 @@
+services:
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+    environment:
+      - STORAGE_TYPE=mem # Para produção, considere um armazenamento persistente
+    networks:
+      - app-network
+
+  servicoa:
+    build:
+      context: ./servicoa
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    environment:
+      - SERVICE_B_URL=http://servicoa:8081/weather
+      - PORT=8082
+    depends_on:
+      - servicob
+      - zipkin
+    networks:
+      - app-network
+
+  servicob:
+    build:
+      context: ./servicob
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - PORT=8081
+      - WEATHER_API_KEY=f66eea1616bb484fad3183814252705
+    depends_on:
+      - zipkin
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
